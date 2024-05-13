@@ -32,6 +32,7 @@ return {
         spell = true, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
+        scrolloff = 15
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
