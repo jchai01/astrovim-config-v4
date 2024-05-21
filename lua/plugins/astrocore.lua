@@ -32,7 +32,7 @@ return {
         spell = true, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
-        scrolloff = 15
+        scrolloff = 15,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -63,6 +63,7 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
+        ["<Leader>a"] = { "gg0VG", desc = "Select all text" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
