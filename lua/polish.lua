@@ -17,4 +17,9 @@
 --   },
 -- }
 --
-vim.opt.whichwrap:append("<,>,h,l,[,]")
+vim.opt.whichwrap:append "<,>,h,l,[,]"
+
+-- xnoremap p P
+-- x for only visual mode
+-- reason: https://superuser.com/questions/321547/how-do-i-replace-paste-yanked-text-in-vim-without-yanking-the-deleted-lines
+vim.keymap.set("x", "p", "P")
