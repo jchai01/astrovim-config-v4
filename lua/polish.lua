@@ -27,3 +27,17 @@ vim.keymap.set("x", "p", "P")
 -- easier whole word delete while in insert mode
 vim.keymap.set("i", "<C-Del>", "<Esc>lce")
 vim.keymap.set("i", "<C-H>", "<C-W>") -- <C-H> is the same as ctrl-backspace, <C-BS>
+
+-- treat .js files as .jsx
+vim.api.nvim_create_autocmd({
+  "BufNewFile",
+  "BufRead",
+  "BufWritePre",
+  "BufEnter",
+}, {
+  pattern = "*.js",
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    vim.api.nvim_set_option_value("filetype", "javascriptreact", { buf = buf })
+  end,
+})
